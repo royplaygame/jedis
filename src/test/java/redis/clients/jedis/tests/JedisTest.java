@@ -26,7 +26,8 @@ import redis.clients.jedis.util.SafeEncoder;
 public class JedisTest extends JedisCommandTestBase {
   @Test
   public void useWithoutConnecting() {
-    Jedis jedis = new Jedis("localhost");
+    //Jedis jedis = new Jedis("localhost");
+	Jedis jedis = new Jedis("192.168.56.102");
     jedis.auth("foobared");
     jedis.dbSize();
   }
